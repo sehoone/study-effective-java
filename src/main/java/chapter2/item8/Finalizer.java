@@ -10,5 +10,7 @@ public class Finalizer {
 	public void getName() {
 		System.out.println("Finalizer sehoone");
 	}
+	
+	//something
 
 }

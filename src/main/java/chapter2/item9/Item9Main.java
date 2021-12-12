@@ -7,6 +7,7 @@ public class Item9Main {
     	/*
     	Resource resource = new Resource();
     	resource.hello();
+    	//exception
     	resource.close();
     	*/
     	
@@ -23,6 +24,10 @@ public class Item9Main {
     	try(Resource resource = new Resource()){
     		resource.hello();
     	}
+    	
+    	String aa ="";
+    	String bb ="";
+    	if(aa.equals(bb)) {}
     	
     	/**
     	 * try-finally보다는 try-with-resources를 사용하라
