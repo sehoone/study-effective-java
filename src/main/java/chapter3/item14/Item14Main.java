@@ -3,6 +3,7 @@ package chapter3.item14;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Item14Main {
 
@@ -37,16 +38,16 @@ public class Item14Main {
             System.out.println(testList.get(i));
 		
 		// 1. stream lamba
-		/*
-		List<Person> sortedList = testList.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
+		//List<Person> sortedList = testList.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
 		
 		List<Person> sortedList = testList.stream()
 				.sorted(Comparator.comparing(Person::getAge)
-						.thenComparing(Person::getName).reversed())
+						.thenComparing(Person::getName))
 				.collect(Collectors.toList());
-		*/   
-		
+		for (int i = 0; i < sortedList.size(); i++)
+            System.out.println("sortedList " + sortedList.get(i));
 		// 2. Comparator
+		/*
 		testList.sort(new Comparator<Person>() {
 	              @Override
 	              public int compare(Person arg0, Person arg1) {
@@ -54,9 +55,32 @@ public class Item14Main {
 	            	  return arg0.getAge() - arg1.getAge();
 	              }
 	       });
-
-		for (int i = 0; i < testList.size(); i++)
+	       for (int i = 0; i < testList.size(); i++)
             System.out.println("sortedList " + testList.get(i));
+            */
+
+		// 3. Comparable
+		/*
+		Person2 pserson11 = new Person2();
+		pserson11.setAge(33);
+		
+		Person2 pserson22 = new Person2();
+		pserson22.setAge(10);
+		
+		Person2 pserson33 = new Person2();
+		pserson33.setAge(40);
+		
+		Person2 pserson44 = new Person2();
+		pserson44.setAge(20);
+		List<Person2> testList2 = new ArrayList<Person2>();
+		testList2.add(pserson11);
+		testList2.add(pserson22);
+		testList2.add(pserson33);
+		testList2.add(pserson44);
+		Collections.sort(testList2);
+		for (int i = 0; i < testList2.size(); i++)
+            System.out.println("sortedList " + testList2.get(i));
+		*/
 		
 	}
 
