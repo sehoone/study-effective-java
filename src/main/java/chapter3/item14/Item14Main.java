@@ -11,6 +11,9 @@ public class Item14Main {
 		 * Comparable을 구현할지 고려하라
 		 * compareTo는 단순 동치성 비교에 더해 순서까지 비교할 수 있으며 제내릭하다. Comparable을 구현했다는 것은 그 클래스의 인스턴스들에는 자연적인 순서가 있음을 뜻한다.
 		 * Comparable을 구현한 클래스를 확장해 값 컴포넌트를 추가하고 싶다면, 확장하는 대신 독립된 클래스를 만들고, 이 클래스에 원래 클래스의 인스턴스를 가리키는 필드를 두자.
+		 * 
+		 * Comparable과 달리 Comparator는 우리가 비교하는 요소 유형의 외부에 있습니다. 우리는 다른 멤버로 비교하기 위해 여러 개의 개별 클래스(Comparator를 구현하는)를 만듭니다.
+		 * person 클래스에 영향이 없게 외부에서만 비교를 할때는 Comparator를 사용
 		 */
 		Person pserson1 = new Person();
 		pserson1.setAge(33);
