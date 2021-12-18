@@ -1,5 +1,6 @@
 package chapter3.item14;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -39,13 +40,14 @@ public class Item14Main {
 		
 		// 1. stream lamba
 		//List<Person> sortedList = testList.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
-		
 		List<Person> sortedList = testList.stream()
-				.sorted(Comparator.comparing(Person::getAge)
+				.sorted(Comparator.comparing(Person::getAge).reversed()
 						.thenComparing(Person::getName))
 				.collect(Collectors.toList());
+		
 		for (int i = 0; i < sortedList.size(); i++)
             System.out.println("sortedList " + sortedList.get(i));
+		
 		// 2. Comparator
 		/*
 		testList.sort(new Comparator<Person>() {
@@ -77,11 +79,14 @@ public class Item14Main {
 		testList2.add(pserson22);
 		testList2.add(pserson33);
 		testList2.add(pserson44);
+		
 		Collections.sort(testList2);
 		for (int i = 0; i < testList2.size(); i++)
             System.out.println("sortedList " + testList2.get(i));
 		*/
 		
+		System.out.println(new BigDecimal("1.0").compareTo(new BigDecimal("1.00")));
+		System.out.println(new BigDecimal("1.00"));
 	}
 
 }
