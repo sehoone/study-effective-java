@@ -20,5 +20,8 @@ public class InstrumentedSet<E> extends ForwardingSet<E> {
     public int getAddCount() {
         return addCount;
     }
+    
+    
+    // hashset > wrapper > 내클래스로 상속
 
 }

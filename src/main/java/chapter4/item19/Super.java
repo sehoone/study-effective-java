@@ -3,7 +3,7 @@ package chapter4.item19;
 public class Super {
     public Super() {
     	// 상속클래스 생성자는 재정의 가능 메서드를 호출하면 안된다
-        overrideMe();
+        //overrideMe();
     }
 
     /**
