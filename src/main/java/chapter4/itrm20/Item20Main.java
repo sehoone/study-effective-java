@@ -15,6 +15,22 @@ public class Item20Main {
 		test.sing();
 		test.writeSong();
 		test.name("sehoone");
+		
+		
+		Cat cat = new Cat();
+		cat.hello();
+		
+		CustomInterface<String> customInterface = () -> "Hello Custom";
+
+		// abstract method
+		String s = customInterface.myCall();
+		System.out.println(s);
+
+		// default method
+		customInterface.printDefault();
+
+		// static method
+		//CustomFunctionalInterface.printStatic();
 	}
 
 }

@@ -6,4 +6,7 @@ public interface Singer{
 	default void name(String name) {
 		System.out.println("your name " + name);
 	}
+	public static void hello() {
+		System.out.print("hello");
+	}
 }
