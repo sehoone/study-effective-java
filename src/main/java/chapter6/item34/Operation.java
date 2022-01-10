@@ -1,4 +1,4 @@
-package chapter5.item34;
+package chapter6.item34;
 
 public enum Operation {
 	// 상수별 메서드 구현
