@@ -17,9 +17,9 @@ public class HybridAnagrams {
 	 * 
 	 */
     public static void main(String[] args) throws IOException {
-        Path dictionary = Paths.get(args[0]);
-        int minGroupSize = Integer.parseInt(args[1]);
-
+        Path dictionary = Paths.get("C:/Users/meras/Documents/anagram.txt");
+        //int minGroupSize = Integer.parseInt(args[1]);
+        int minGroupSize = 2;
         try (Stream<String> words = Files.lines(dictionary)) {
             words.collect(groupingBy(word -> alphabetize(word)))
                     .values().stream()

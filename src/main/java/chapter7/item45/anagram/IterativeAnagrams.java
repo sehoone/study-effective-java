@@ -1,8 +1,14 @@
 package chapter7.item45.anagram;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class IterativeAnagrams {
     public static void main(String[] args) throws IOException {
@@ -10,8 +16,8 @@ public class IterativeAnagrams {
     	 * 사전파일에서 단어를 읽어 사용작사 지정한 값보다 원소수가 많은 아나그램 그룹을 출력.
     	 * 아나그램이란 철자를 구성하는 알파벳이 같고 순서만 다른 단어를 뜻함
     	 */
-        File dictionary = new File(args[0]);
-        int minGroupSize = Integer.parseInt(args[1]);
+    	Path dictionary = Paths.get("C:/Users/meras/Documents/anagram.txt");
+        int minGroupSize = 2;
 
         Map<String, Set<String>> groups = new HashMap<>();
         try (Scanner s = new Scanner(dictionary)) {
