@@ -1,4 +1,4 @@
-package item8.item51;
+package chapter8.item51;
 
 public class Item51Main {
 

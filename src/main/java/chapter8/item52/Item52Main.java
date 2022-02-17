@@ -1,4 +1,4 @@
-package item8.item52;
+package chapter8.item52;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
